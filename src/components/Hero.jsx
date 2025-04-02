@@ -43,7 +43,6 @@ const Hero = ({ contactRef }) => {
     }
   };
 
-  // Fonction pour scroller vers la section Contact
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });

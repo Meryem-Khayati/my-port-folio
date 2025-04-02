@@ -57,12 +57,7 @@ body {
   color: #fff;
 }
 
-/* .divider {
-  border-bottom: 1px solid var(--border);
-  margin: 3rem 0;
-  width: calc(100% + var(--container-padding) + var(--container-padding));
-  margin-left: calc(var(--container-padding) * -1);
-} */
+
 
 li {
   list-style: none;
@@ -79,92 +74,7 @@ a:hover {
   display: flex;
   align-items: center;
 }
-/* 
-button {
-  all: unset;
 
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-button:active {
-  scale: 0.9;
-}
-
-button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-} */
-
-/* @media (max-width: 1000px) {
-  .container {
-    --container-padding: 1.7rem;
-    width: 90%;
-    padding: 0 var(--container-padding);
-  }
-
-  .divider {
-    width: calc(100% + var(--container-padding) + var(--container-padding));
-    margin-left: calc(var(--container-padding) * -1);
-  }
-} */
-
-/* ::-webkit-scrollbar {
-  width: 0.1rem;
-}
-
-::-webkit-scrollbar-track {
-  border: 7px solid #292c3b;
-  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
-
-  background-color: #d4d4d8;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} */
-
-/* for Firefox */
-/* 
-
-.scroll2Top {
-  background-color: rgba(25, 118, 210, 0.85);
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 2rem;
-  right: 3%;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.25rem;
-}
-
-.scroll2Top:hover {
-  background-color: rgb(25, 118, 210);
-} */
-
-/* @media (max-width: 600px) {
-  .container {
-    width: 98%;
-    padding: 0 var(--container-padding);
-  }
-
-  .scroll2Top {
-    width: 2.2rem;
-    height: 2.2rem;
-    opacity: 0.6;
-    font-size: 1rem;
-  }
-} */
 
 
 /* ========================
@@ -332,11 +242,7 @@ header.flex {
   }
   
          /* ##################### Left ################### */
-  /* section.hero .parent-avatar.flex {
-    align-items: end;
-    gap: 0.6rem;
-    min-height: 88px;
-  } */
+  
   
   
   section.hero .left-section {
@@ -345,30 +251,6 @@ header.flex {
     width: 95%;
   }
   
-  /* section.hero .icon-verified {
-    color: var(--blue);
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  section.hero .avatar {
-    width: 98px;
-    height: 98px;
-    border-radius: 50%;
-    border: 1px solid darkorange;
-    padding: 1px;
-    box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
-  } */
-  /* .tagline{
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    font-size: 30px;
-    margin-top: 50px;
-    display: inline-block; 
-  } */
   
   section.hero h1.title {
     font-size: 5vw;
@@ -452,13 +334,7 @@ header.flex {
   }
   }
 
-  /* .about-animation{
-  height: 40%;
-  } */
-  /* .typewriter-container{
-  max-height: 40% !important;
-  } */
-  
+
   /* ===================================
       2. Right Section ==> animation
   ====================================== */
@@ -521,48 +397,6 @@ header.flex {
 
 /*########################################### About Me ###################################################*/
 
-
-/* .about-component-container{
-  margin-top:5rem;
-} */
-
-/* .about-container {
-  color: white;
-  min-height: 75vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.about-header {
-  text-align: center;
-  margin-bottom: -30px; 
-  position: relative;
-  z-index: 1;
-  margin-top: 40px;
-  font-size: 20px;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-.about-content {
-  display: flex;
-  max-width: 900px;
-  height: 500px;
-  gap: 30px;
-  position: relative;
-  z-index: 0;
-} */
-
-/* Image */
-/* .about-image {
-  width: 30%;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-} */
 
 
 .skill {
@@ -696,7 +530,7 @@ header.flex {
 
 }
 .skill-item:nth-child(5n+1) {
-  clear: left; /* Force un retour à la ligne tous les 3 éléments */
+  clear: left; 
 }
 
 @media (max-width: 1024px) {
@@ -718,12 +552,7 @@ header.flex {
 
 /* ###################### Main ########################################################## */
 
-/* ========================
- table of contents
-===========================
 
-2. Right Section ==> Card
-3- Responsive Design (media query)*/
 
 .container--flex {
   margin-top: 80px;
@@ -760,12 +589,12 @@ main section.right-section.flex {
   background: white;
   width: 100%;
   max-width: 450px;
-  height: 560px; /* Fixer la hauteur */
+  height: 560px; 
   padding: 20px;
   border: 1px solid rgba(93, 188, 252, 0.3);
   justify-content: space-between;
-  overflow: hidden; /* Pour éviter l’expansion du conteneur */
-  will-change: transform; /* Optimisation pour l'animation */
+  overflow: hidden; 
+  will-change: transform; 
 }
 .card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -966,21 +795,19 @@ main.flex {
   Responsive Design
 ================================ */
 
-/* 🖥️ Grand écran (≥1024px) : 3 cartes par ligne */
+
 @media (min-width: 1024px) {
   .card {
     flex: 1 1 calc(33.33% - 20px); /* 3 cartes */
   }
 }
 
-/* 📱 Écran moyen (768px - 1023px) : 2 cartes par ligne */
 @media (max-width: 1023px) {
   .card {
     flex: 1 1 calc(50% - 20px); /* 2 cartes */
   }
 }
 
-/* 📱 Petit écran (<768px) : 1 carte par ligne */
 @media (max-width: 768px) {
   main.flex {
     justify-content: center;
@@ -1092,7 +919,6 @@ main.flex {
   text-align: left;
 }
 
-/* Ajout d'un effet de petite flèche */
 .timeline-content::before {
   content: "";
   position: absolute;
@@ -1142,7 +968,7 @@ main.flex {
 
 
 .timeline-icon svg {
-  color: white; /* Icône blanche */
+  color: white;
 }
 
 .timeline-item.right .timeline-content::before {
@@ -1152,18 +978,18 @@ main.flex {
   background: none; 
 }
 .timeline-content h3{
-  color: #282334;
+  color: rgb(12, 12, 12);
   font-weight: bold;
 }
 .timeline-content p{
-  color: #282334;
+  color: #cbc0f0;
   font-style:oblique ;
   font-size: 15px;
   font-weight: 400;
 }
 .timeline-content.visible {
-  opacity: 1; /* Make visible when scrolled into view */
-  transform: translateX(0); /* Slide into place */
+  opacity: 1; 
+  transform: translateX(0); 
 }
 
 @media (max-width: 768px) {
@@ -1173,7 +999,7 @@ main.flex {
   }
 
   .timeline-line {
-    left: 25px; /* Déplacer la ligne à gauche */
+    left: 25px; 
     width: 4px;
     height: 100%;
     background: #6C4AAA;
@@ -1189,10 +1015,10 @@ main.flex {
 
   .timeline-item.left, .timeline-item.right {
     margin-left: 0;
-    padding-left: 80px; /* Ajouter un espace pour la ligne */
+    padding-left: 80px; 
   }
   .timeline-item.left{
-    padding-left: 40px; /* Ajouter un espace pour la ligne */
+    padding-left: 40px; 
 
   }
 
@@ -1207,7 +1033,7 @@ main.flex {
   }
 
   .timeline-icon-container {
-    left: 20px; /* Positionner les icônes au-dessus de la ligne */
+    left: 20px; 
     transform: translate(-50%, -50%);
   }
 
@@ -1253,8 +1079,8 @@ main.flex {
   align-items: center;
   min-height: 10vh ;
   background-color: transparent;
-  width: 100%; /* Assure que le container occupe toute la largeur */
-  padding: 0 20px; /* Ajoute un peu de padding horizontal */
+  width: 100%;
+  padding: 0 20px; 
   position: relative;
 }
 
@@ -1341,11 +1167,6 @@ h2 {
 }
 
 
-
-/* .contact-image img {
-  width: 100%;
-  max-width: 180px;
-} */
 .contact-image {
   flex: 1;
   display: flex;

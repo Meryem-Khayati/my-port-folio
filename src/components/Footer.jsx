@@ -17,7 +17,6 @@ const Footer = () => {
           alert("Erreur lors de la copie du numéro.");
         });
     } else {
-      // Fallback pour les navigateurs qui ne supportent pas l'API Clipboard
       const tempInput = document.createElement("input");
       tempInput.value = phoneNumber;
       document.body.appendChild(tempInput);

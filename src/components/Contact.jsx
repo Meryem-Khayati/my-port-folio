@@ -20,8 +20,8 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_8prqp5n", // Remplace par ton Service ID
-        "template_kf165uh", // Remplace par ton Template ID
+        "service_8prqp5n", 
+        "template_kf165uh",
         {
           user_email: formData.email,
           message: formData.message,

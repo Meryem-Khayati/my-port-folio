@@ -13,7 +13,7 @@ const Carriere = () => {
   useEffect(() => {
     const options = {
       rootMargin: "0px",
-      threshold: 0.5, // Trigger when 50% of the element is visible
+      threshold: 0.5, 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -34,7 +34,7 @@ const Carriere = () => {
 
   return (
     <div className="global-timeline">
-      <h2>My Career</h2>
+      <h2>My Education</h2>
       <div className="timeline">
         {timelineData.map((item) => (
           <div key={item.id} className={`timeline-item ${item.side}`}>

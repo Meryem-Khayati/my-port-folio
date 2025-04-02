@@ -8,10 +8,10 @@ const ParticlesSection = () => {
   };
 
   const particlesLoaded = useCallback(async (container) => {
-    if (!container) return; // Vérifie si le container est défini
+    if (!container) return; 
 
     container.interactivity.element.addEventListener("click", (event) => {
-      if (!container.particles || !container.particles.array) return; // Vérifie si les particules existent
+      if (!container.particles || !container.particles.array) return; 
 
       container.particles.array.forEach((particle) => {
         const dx = event.clientX - particle.position.x;
@@ -19,10 +19,9 @@ const ParticlesSection = () => {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < 50) {
-          // 💥 Effet d'animation : agrandir puis réduire la particule
-          particle.size.value = 10; // Augmente la taille
+          particle.size.value = 10; 
           setTimeout(() => {
-            particle.size.value = 3; // Rétablit la taille normale
+            particle.size.value = 3; 
           }, 500);
         }
       });
@@ -58,10 +57,7 @@ const ParticlesSection = () => {
           },
         }}
       />
-      {/* <div className="content">
-        <h1>Bienvenue sur notre site</h1>
-        <p>Un espace interactif avec un effet dynamique !</p>
-      </div> */}
+      
     </div>
   );
 };

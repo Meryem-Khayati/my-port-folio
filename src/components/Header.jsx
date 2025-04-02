@@ -17,7 +17,6 @@ const Header = ({ aboutMeRef, skillsRef, educationRef, projectsRef, contactRef }
     }
   }, [theme]);
 
-  // Fonction pour scroller vers une section
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
