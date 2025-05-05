@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiDownload } from "react-icons/fi";
-import f from "../assets/images/technologies/CV_MeryemKhayati.pdf"
+import f from "../assets/images/technologies/CV_MERYEM_KHAYATI.pdf"
 
 export default function AboutMe() {
     const [hover, setHover] = useState(false);

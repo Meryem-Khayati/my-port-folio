@@ -30,11 +30,11 @@ const ContactForm = () => {
       )
       .then(
         () => {
-          setStatus("Message envoyé !");
+          setStatus("Message sent!");
           setFormData({ email: "", message: "" });
         },
         (error) => {
-          setStatus("Erreur lors de l'envoi.");
+          setStatus("Error while sending.");
           console.error("Erreur:", error);
         }
       );
