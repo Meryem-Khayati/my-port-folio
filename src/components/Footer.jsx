@@ -13,9 +13,7 @@ const Footer = () => {
           setIsCopied(true);
           setTimeout(() => setIsCopied(false), 2000);
         })
-        .catch(() => {
-          alert("Erreur lors de la copie du numéro.");
-        });
+        .catch(() => alert("Erreur lors de la copie du numéro."));
     } else {
       const tempInput = document.createElement("input");
       tempInput.value = phoneNumber;
@@ -42,27 +40,29 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithub size={24} />
+            <FaGithub size={22} />
           </a>
           <a
-            href="https://www.linkedin.com/in/meryem-khayati%F0%9F%87%B5%F0%9F%87%B8-0489b8271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            href="https://www.linkedin.com/in/meryem-khayati%F0%9F%87%B5%F0%9F%87%B8-0489b8271"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={22} />
           </a>
           <a href="mailto:meryemkhayati91@gmail.com" aria-label="Email">
-            <FaEnvelope size={24} />
+            <FaEnvelope size={22} />
           </a>
           <button onClick={copyPhoneNumber} aria-label="Phone" className="phone-button">
-            <FaPhoneAlt size={24} />
+            <FaPhoneAlt size={22} />
             {isCopied && <span className="copy-message">Copied!</span>}
           </button>
         </div>
 
         <div className="footer-text">
-          <p>&copy; Meryem Khayati {new Date().getFullYear()}. All rights reserved.</p>
+          <p>
+            © <span>Meryem Khayati</span> {new Date().getFullYear()}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

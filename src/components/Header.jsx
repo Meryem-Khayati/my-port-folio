@@ -6,6 +6,7 @@ const Header = ({ aboutMeRef, skillsRef, educationRef, projectsRef, contactRef }
   const [theme, setTheme] = useState(
     localStorage.getItem("currentMode") ?? "dark"
   );
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (theme === "light") {
@@ -17,57 +18,69 @@ const Header = ({ aboutMeRef, skillsRef, educationRef, projectsRef, contactRef }
     }
   }, [theme]);
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
+      setshowModal(false);
     }
   };
 
   return (
-    <header className="flex ">
+    <header
+      className="flex"
+      style={{
+        transition: 'background 0.4s, box-shadow 0.4s',
+        background: scrolled ? 'var(--bgHeader)' : 'transparent',
+        boxShadow: scrolled ? '0 4px 30px rgba(0,0,0,0.15)' : 'none',
+        backdropFilter: scrolled ? 'blur(16px)' : 'none',
+        borderBottom: scrolled ? '1px solid var(--border)' : 'none',
+        position: 'sticky',
+        top: 0,
+        zIndex: 99,
+        padding: '0.9rem 2.4rem',
+        marginTop: 0,
+      }}
+    >
       <button
-        onClick={() => {
-          setshowModal(true);
-        }}
+        onClick={() => { setshowModal(true); }}
         className="menu icon-menu flex"
-      >
-      </button>
+      />
+
       <div className="logo">
-        <div className="firstlogo ">Mery<span className="secondlogo">Em</span></div>
+        <div className="firstlogo">Mery<span className="secondlogo">Em</span></div>
       </div>
 
       <nav>
         <ul className="flex">
           <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(aboutMeRef); 
-            }}>
-              About 
+            <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(aboutMeRef); }}>
+              About
             </a>
           </li>
           <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(skillsRef); 
-            }}>
+            <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(skillsRef); }}>
               Skills
             </a>
           </li>
           <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(educationRef); 
-            }}>
+            <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(educationRef); }}>
               Education
             </a>
           </li>
           <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(projectsRef); 
-            }}>
+            <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(projectsRef); }}>
               Projects
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(contactRef); }}>
+              Contact
             </a>
           </li>
         </ul>
@@ -75,18 +88,15 @@ const Header = ({ aboutMeRef, skillsRef, educationRef, projectsRef, contactRef }
 
       <button
         onClick={() => {
-          localStorage.setItem(
-            "currentMode",
-            theme === "dark" ? "light" : "dark"
-          );
+          localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark");
           setTheme(localStorage.getItem("currentMode"));
         }}
         className="mode flex"
       >
         {theme === "dark" ? (
-          <span className="icon-moon-o"> </span>
+          <span className="icon-moon-o" />
         ) : (
-          <span className="icon-sun"> </span>
+          <span className="icon-sun" />
         )}
       </button>
 
@@ -94,45 +104,23 @@ const Header = ({ aboutMeRef, skillsRef, educationRef, projectsRef, contactRef }
         <div className="fixed">
           <ul className="modal">
             <li>
-              <button
-                className="icon-close"
-                onClick={() => {
-                  setshowModal(false);
-                }}
-              />
+              <button className="icon-close" onClick={() => setshowModal(false)} />
             </li>
             <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(aboutMeRef); 
-            }}>
-              About 
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(skillsRef); 
-            }}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(educationRef); 
-            }}>
-              Education
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={(event) => { 
-                event.preventDefault(); 
-                scrollToSection(projectsRef); 
-            }}>
-              Projects
-            </a>
-          </li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(aboutMeRef); }}>About</a>
+            </li>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(skillsRef); }}>Skills</a>
+            </li>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(educationRef); }}>Education</a>
+            </li>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(projectsRef); }}>Projects</a>
+            </li>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection(contactRef); }}>Contact</a>
+            </li>
           </ul>
         </div>
       )}
